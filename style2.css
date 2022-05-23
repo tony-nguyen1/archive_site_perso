@@ -1,0 +1,16 @@
+.cards .card {
+  background-color: red;
+  /* width: fit-content; */
+  width: 50%;
+  /* padding-right:10px */
+}
+.cards .card .contener {
+  position: relative;
+  left:7px; /* taille de la cote */
+  background-color: beige;
+  /* padding-left: 10px; */
+}
+
+.cards .card, .cards .card .contener {
+  border-radius: 10px;
+}

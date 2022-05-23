@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "Inria Sans";
+  src:url("InriaSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Inria Serif";
+  src:url("InriaSerif-Regular.ttf") format("truetype");
+}
+.colGauche {
+  background-color: #064C9E;
+  grid-column: 1;
+  display: grid;
+}
+.contentGauche {
+  margin-left: 11.25rem;
+  margin-top: 8rem;
+  margin-right: 11.25rem;
+  color: #F0F0F0;
+}
+.contentGauche p {
+  font-size: 45px;
+  font-family: "Inria Sans";
+  margin-bottom: 6.25rem;
+}
+.contentGauche h1 {
+  font-size: 92px;
+  font-family: "Inria Serif";
+  margin-bottom: 6.25rem;
+}
+body {
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 100%;
+}
+.bouttonNeobrutal {
+  border: 7px solid black;
+  width: 3.488em;
+  /* width: fit-content; */
+  height: 1.682em;
+  /* height: fit-content; */
+  background-color: #FAA43F;
+  font-size: 88px;
+  color: black;
+  display:flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 7px 7px black;
+  text-decoration: none;
+}
+.bouttonNeobrutal img {
+  height: 5.875rem;
+}
+.colDroite {
+  grid-column: 2;
+  background-color: #F0F0F0;
+  padding-right: 7.375rem;;
+  padding-left: 7.375rem;
+  padding-top: 8rem;
+  display: flex;
+  flex-flow: column;
+  row-gap: 7.375rem;
+}
+.contactLien img {
+  width: 9.75rem;
+  margin-right: 62px;
+}
+.contactLien {
+  display: flex;
+  flex-flow: row;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  font-size: 36px;
+}
+
+
+
+
+
+
+html {
+  height: 100%;
+}
+* {
+  margin: 0px;
+  font-size: 16px;
+}

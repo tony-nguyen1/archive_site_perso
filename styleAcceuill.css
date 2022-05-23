@@ -1,0 +1,78 @@
+#overlayTop {
+  display: grid;
+  grid-template-columns: 8.6875rem auto 7.875rem;
+  grid-template-rows: 30px;
+}
+span {
+  font-size: 23px;
+}
+#nom {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+#ville {
+  grid-column-start: -2;
+  grid-column-end: -1;
+}
+
+
+#overlayBot h1 {
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 92;
+  transform: translate(-10px);
+}
+#overlayBot div {
+  font-size: 56;
+}
+#overlayBot #buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 104px;
+  row-gap: 10px;
+}
+.buttonPrimary {
+  background-color: #064C9E;
+  padding: 25px 19px;
+  border-radius: 10px;
+  border: 7px solid #064C9E;
+}
+.buttonSecondary {
+  padding: 25px 19px;
+  border-radius: 10px;
+  border: 7px solid #064C9E;
+}
+
+#overlay {
+  display:grid;
+  grid-template-rows: 30px auto 1fr;
+  color: white;
+  margin-top: 160px;
+  width: 73%;
+  height: 67%;
+}
+#overlay #overlayBot {
+  grid-row-start: -2;
+  /* justify-self: flex-end; */
+  align-self: flex-end;
+  
+}
+#overlay #overlayTop {
+  grid-row-start: 1;
+}
+
+body {
+  display: grid;
+  justify-items: center;
+
+  background-image: url("/home/tony/Téléchargements/tony.jpg");
+  
+  height: 100%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0;
+}
