@@ -66,7 +66,7 @@ body {
   display: grid;
   justify-items: center;
 
-  background-image: url("/home/tony/Téléchargements/tony.jpg");
+  background-image: url("./tony.jpg");
   
   height: 100%;
 
