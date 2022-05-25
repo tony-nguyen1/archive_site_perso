@@ -14,9 +14,12 @@ header {
   grid-column: col-start / span 12;
 }
 header ol {
-  width: fit-content;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: 60px;
 }
 header * {
   text-decoration: none;
@@ -84,6 +87,9 @@ header * {
   padding-top: 64px;
   padding-left: 74px;
   padding-bottom: 53px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
 }
 #projets .projet .image {
   grid-column-start: 7;
@@ -109,7 +115,6 @@ header * {
 }
 
 #projets .projet p {
-  margin-bottom: 40px;
   font-size: 34px;
 }
 #projets .projet .contenu a {
@@ -118,16 +123,23 @@ header * {
   text-decoration: none;
   padding: 6px 14px;
   border-radius: 5px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  column-gap: 11px;
+  align-items: center;
 }
 
 .projet:not(:first-child) {
   margin-top: 146px;
 }
 
-.logo {
-  height: 64px;;
+#projets .projet .logo {
+  height: 64px;
+  width: 64px;
 }
 
 body {
   background-color: #F0F0F0;
+  margin: 8px 70px;
 }
