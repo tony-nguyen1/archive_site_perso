@@ -23,13 +23,18 @@ header ol {
 }
 header * {
   text-decoration: none;
-  color: black;
+  color: #8a8a8a;
   font-size: clamp(20px, 2.96875vw, 56px);
   /* font-size: 2.96875vw; */
   /* font-size: minmax(20px, 2.96875vw); */
 }
-.active-link {
+header a:hover {
+  color: #696969;
+  /* background-color: #064C9E; */
+}
+header a.active-link {
   position: relative;
+  color: black;
 }
 .active-link::before {
   content: '';
