@@ -44,6 +44,11 @@ header a.active-link {
   /* height: 0.21428571428em; */
   background-color: black;
 }
+header nav svg#logo {
+  height: 1em;
+  align-self: center;
+  width: auto;
+}
 
 #filtre {
   grid-column: col-start / span 2;
