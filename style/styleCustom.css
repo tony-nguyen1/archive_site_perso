@@ -1,0 +1,19 @@
+/* var */
+:root {
+  --main-bg-color: #F0F0F0;
+  --not-active-link-color: #8a8a8a;
+  --hover-link-color: #696969;
+  --nav-font-size: clamp(20px, 2.96875vw, 56px);
+  --espace-blanc: 70px;
+  --nav-column-gap: 60px;
+  --container-row-gap: 140px;
+}
+
+/* reset */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+}
