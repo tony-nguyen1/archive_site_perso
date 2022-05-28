@@ -69,3 +69,43 @@ main hgroup h2 {
 main h2:not(main hgroup h2) {
   margin-top: 20px;
 }
+
+main #gallerie div.images {
+  /* width: 100%;
+  height: 35vh; */
+
+  background-color: #e4e3e3;
+  display: flex;
+  overflow: auto;
+  outline: 1px dashed lightgray;
+  flex: none;
+
+  width: 100%;
+  height: 128px;
+  flex-flow: row nowrap;
+
+  scroll-snap-type: x mandatory;
+  /* https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
+}
+
+main #gallerie div.images div, img {
+  height: 100%;
+  width: auto;
+}
+main #gallerie div.images div {
+  text-align: center;
+  scroll-snap-align: center;
+  flex: none;
+  line-height: 128px;
+  font-size: 64px;
+  width: 80%;
+  height: 128px;
+}
+
+main #gallerie div.images div:nth-child(even) {
+  background-color: aqua;
+}
+
+main #gallerie div.images div:nth-child(odd) {
+  background-color: blueviolet;
+}
