@@ -85,6 +85,7 @@ header nav svg#logo {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  border-radius: 39px;
   /* position: relative;
   padding-top: 64px;
   padding-left: 74px;
@@ -111,6 +112,8 @@ header nav svg#logo {
   background-size: cover;
 
   height: 100%;
+
+  border-radius: 0px 39px 39px 0px;
 }
 #projets .projet h2 {
   position: absolute;

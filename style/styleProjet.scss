@@ -1,13 +1,11 @@
 :root {
   --container-row-gap: 45px;
 }
-
 html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
-
 body {
   display: flex;
   flex-flow: column;
@@ -22,45 +20,39 @@ header nav#navbar-desktop * {
   color: var(--not-active-link-color);
   font-size: var(--nav-font-size);
 }
-
 header nav#navbar-desktop a:hover {
   color: var(--hover-link-color);
 }
-
 header svg {
   height: 1em;
   width: auto;
 }
-
 .container {
   display: grid;
-  grid-template-columns: var(--espace-blanc) calc(100% - 2 * var(--espace-blanc)) var(--espace-blanc);
+  grid-template-columns: var(--espace-blanc) calc(100% - (2*var(--espace-blanc)))  var(--espace-blanc);
   grid-template-rows: auto auto;
-  grid-template-areas: ". navbarZone ." ". mainZone .";
+  grid-template-areas: 
+    ". navbarZone ."
+    ". mainZone .";
   row-gap: var(--container-row-gap);
 }
-
 header {
   grid-area: navbarZone;
 }
-
 header nav#navbar-desktop {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 8px;
 }
-
 header nav#navbar-desktop #logo {
   justify-self: start;
   align-self: center;
 }
-
 header nav#navbar-desktop div.lienTexte {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  -moz-column-gap: var(--nav-column-gap);
-       column-gap: var(--nav-column-gap);
+  column-gap: var(--nav-column-gap);
 }
 
 main {
@@ -68,49 +60,47 @@ main {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: "fil fil" "titre langage" "description description" "video galerie" "special special";
+  grid-template-areas: 
+    "fil fil"
+    "titre langage"
+    "description description"
+    "video galerie"
+    "special special";
   grid-row-gap: 50px;
-}
-main #filAriane {
-  grid-area: fil;
-}
-main hgroup {
-  grid-area: titre;
-  margin-top: 30px;
-  font-size: 45px;
-}
-main hgroup h2 {
-  font-size: 0.666em;
-}
-main h2:not(main hgroup h2) {
-  margin-bottom: 10px;
-}
-main #desc {
-  grid-area: description;
-}
-main #video {
-  grid-area: video;
-}
-main #galerie {
-  grid-area: galerie;
-}
-main #special {
-  grid-area: special;
+
+  #filAriane {
+    grid-area: fil;
+  }
+  hgroup {
+    grid-area: titre;
+    margin-top: 30px;
+    font-size: 45px;
+    h2 {
+      font-size: 0.666em;
+    }
+  }
+  h2:not(main hgroup h2) {  margin-bottom: 10px; }
+  #desc { grid-area: description; }
+  #video { grid-area: video; }
+  #galerie { grid-area: galerie; }
+  #special { grid-area: special; }
 }
 
 #galerie .images {
   /* width: 100%;
   height: 35vh; */
+
   background-color: #e4e3e3;
   display: flex;
   overflow: auto;
   outline: 1px dashed lightgray;
   flex: none;
+
   width: 100%;
   height: 315px;
   flex-flow: row nowrap;
-  -ms-scroll-snap-type: x mandatory;
-      scroll-snap-type: x mandatory;
+
+  scroll-snap-type: x mandatory;
   /* https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
 }
 
@@ -118,16 +108,14 @@ main #galerie div.images div, img {
   height: 90%;
   width: auto;
 }
-
 main #galerie div.images div {
   text-align: center;
   scroll-snap-align: center;
   line-height: 128px;
   font-size: 64px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   height: 315px;
+
   display: flex;
   align-items: center;
 }
@@ -138,4 +126,4 @@ main #galerie div.images div:nth-child(even) {
 
 main #galerie div.images div:nth-child(odd) {
   background-color: blueviolet;
-}/*# sourceMappingURL=styleProjet.css.map */
+}
