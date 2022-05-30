@@ -58,6 +58,9 @@ header nav svg#logo {
   padding-bottom: 28px;
   padding-left: 22px;
   padding-right: 22px;
+  position: sticky;
+  top: 20px;
+  border-radius: 23px;
 }
 #filtre h3 {
   color: white;
@@ -75,6 +78,7 @@ header nav svg#logo {
   background-color: white;
   border-radius: 10px;
   padding: 0px 0.7em;
+  cursor: pointer;
 }
 
 #projets {
@@ -115,6 +119,9 @@ header nav svg#logo {
 
   border-radius: 0px 39px 39px 0px;
 }
+#projets #thumbnail-quiestce {
+  background-image: url("../assets/ProjetQuiEstCe/thumbnail.png");
+}
 #projets .projet h2 {
   position: absolute;
   top: -0.75em;
@@ -141,6 +148,7 @@ header nav svg#logo {
   flex-direction: row;
   column-gap: 11px;
   align-items: center;
+  font-size: 28px;
 }
 
 .projet:not(:first-child) {
@@ -151,6 +159,22 @@ header nav svg#logo {
   height: 64px;
   width: 64px;
 }
+
+#logo-js {
+  border-radius: 8px;
+}
+.langage {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+}
+#filtre ul li.selected {
+  background-color: black;
+  color: white;
+}
+#projets div.projet.removed { position: absolute; visibility: hidden; display: none; }
+
+
 
 body {
   background-color: #F0F0F0;

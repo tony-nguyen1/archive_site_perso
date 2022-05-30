@@ -33,14 +33,14 @@
         <h3>Filtre</h3>
         <ul>
           <li onclick="filter(this, 'html')">Html</li>
-          <li>Css</li>
-          <li>JavaScript</li>
-          <li>Java</li>
-          <li>Python</li>
+          <li onclick="filter(this, 'css')">Css</li>
+          <li onclick="filter(this, 'js')">JavaScript</li>
+          <li onclick="filter(this, 'java')">Java</li>
+          <li onclick="filter(this, 'py')">Python</li>
         </ul>
     </div>
     <div id="projets">
-      <div class="projet">
+      <div class="projet py">
         <div class="contenu">
           <h2>Qui-est-ce ?</h2>
           <p>
@@ -53,14 +53,20 @@
             <svg id="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>
           </a>
         </div>
-        <div class="image"></div>
+        <div id="thumbnail-quiestce" class="image"></div>
       </div>
-      <div class="projet">
+      <div class="projet html css js">
         <div class="contenu">
           <h2>Site web perso</h2>
           <p>
             Mon Curriculum Vitae en ligne et fait à la main.
           </p>
+          <div class="langage">
+            <img src="./assets/logo/html.svg" alt="Logo de Html" class="logo">
+            <img src="./assets/logo/css.svg" alt="Logo de Css" class="logo">
+            <img src="./assets/logo/sass.svg" alt="Logo de Sass" class="logo">
+            <img id="logo-js" src="./assets/logo/javascript.png" alt="Logo de Sass" class="logo">
+          </div>
           <a href="./ProjetSitePerso.html">
             En savoir plus
             <svg id="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>

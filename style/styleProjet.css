@@ -1,5 +1,6 @@
 :root {
   --container-row-gap: 45px;
+  --main-projet-font-size: 28px;
 }
 
 html, body {
@@ -70,6 +71,11 @@ main {
   grid-template-rows: auto auto auto auto auto;
   grid-template-areas: "fil fil" "titre langage" "description description" "video galerie" "special special";
   grid-row-gap: 50px;
+  grid-column-gap: 1px;
+  background-color: white;
+  padding: 40px;
+  margin-bottom: 70px;
+  font-size: 1.75rem;
 }
 main #filAriane {
   grid-area: fil;
@@ -77,10 +83,10 @@ main #filAriane {
 main hgroup {
   grid-area: titre;
   margin-top: 30px;
-  font-size: 45px;
+  font-size: 2.8125rem;
 }
 main hgroup h2 {
-  font-size: 0.666em;
+  font-size: 1.875rem;
 }
 main h2:not(main hgroup h2) {
   margin-bottom: 10px;
@@ -96,6 +102,10 @@ main #galerie {
 }
 main #special {
   grid-area: special;
+}
+
+#filAriane {
+  font-size: 1rem;
 }
 
 #galerie .images {
