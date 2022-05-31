@@ -1,0 +1,88 @@
+:root {
+  --main-blue-color: #064C9E;
+  --main-orange-color: #FAA43F ;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "colGauche colDroite";
+}
+
+.colGauche {
+  background-color: var(--main-blue-color);
+  grid-area: colGauche;
+}
+.colGauche .contentGauche {
+  margin-left: 11.25rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  margin-right: 11.25rem;
+  color: #F0F0F0;
+}
+.colGauche p {
+  font-size: 45px;
+  margin-bottom: 6.25rem;
+}
+.colGauche h1 {
+  font-size: 92px;
+  margin-bottom: 6.25rem;
+}
+
+.colDroite {
+  background-color: var(--main-bg-color);
+  grid-area: colDroite;
+  overflow-wrap: anywhere;
+}
+
+.bouttonNeobrutal {
+  border: 7px solid black;
+  width: 3.488em;
+  height: 1.682em;
+  background-color: var(--main-orange-color);
+  font-size: 88px;
+  color: black;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 7px 7px black;
+}
+
+.bouttonNeobrutal img {
+  height: 5.875rem;
+}
+
+.colDroite {
+  grid-column: 2;
+  background-color: #F0F0F0;
+  padding-right: 7.375rem;
+  padding-left: 7.375rem;
+  padding-top: 8rem;
+  display: flex;
+  flex-flow: column;
+  row-gap: 7.375rem;
+}
+
+.contactLien {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  font-size: 36px;
+}
+.contactLien img {
+  width: 9.75rem;
+  margin-right: 62px;
+}/*# sourceMappingURL=styleContact.css.map */
