@@ -23,7 +23,7 @@ nav#navbar-mobile {
   .container {
     display: grid;
     grid-template-rows: auto 80px;
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
     grid-template-areas: 
       "mainZone"
       "navbarMobileZone";

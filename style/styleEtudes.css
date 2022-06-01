@@ -7,6 +7,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -70,20 +71,49 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
   grid-column-gap: 120px;
+  grid-row-gap: 30px;
 }
 
 .card {
   background-color: white;
   border-radius: 30px;
-  padding: 84px;
+  padding: 60px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+}
+.card span.date {
+  font-style: italic;
+}
+.card h1 {
+  font-size: 2.5rem;
+}
+.card h2 {
+  font-size: 1.4rem;
 }
 .card img {
   height: 100px;
   position: absolute;
   top: 40px;
   right: 100px;
+}
+
+@media (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 20px;
+    margin-bottom: 0px;
+  }
+
+  .card {
+    padding: 40px;
+  }
+  .card img {
+    height: 64px;
+    right: 20px;
+    top: 20px;
+  }
 }/*# sourceMappingURL=styleEtudes.css.map */

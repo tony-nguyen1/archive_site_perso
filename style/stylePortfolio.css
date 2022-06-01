@@ -83,6 +83,10 @@ header nav svg#logo {
 
 #projets {
   grid-column: 3 / span 10;
+  display: flex;
+  flex-direction: column;
+  row-gap: 146px;
+  margin-bottom: 50px;
 }
 
 #projets .projet {
@@ -149,10 +153,6 @@ header nav svg#logo {
   column-gap: 11px;
   align-items: center;
   font-size: 28px;
-}
-
-.projet:not(:first-child) {
-  margin-top: 146px;
 }
 
 #projets .projet .logo {

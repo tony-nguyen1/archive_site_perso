@@ -6,6 +6,7 @@ html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
+  overflow-x: hidden;
 }
 body {
   display: flex;
@@ -63,19 +64,54 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
   // grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
   grid-column-gap: 120px;
+  grid-row-gap: 30px;
+
+  // display: flex;
+  // flex-direction: column;
+  // row-gap: 30px;
 }
 
 .card {
   background-color: white;
   border-radius: 30px;
-  padding: 84px;
+  padding: 60px;
   height: fit-content;
   position: relative;
+
+  span.date {
+    font-style: italic;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
 
   img {
     height: 100px;
     position: absolute;
     top: 40px;
     right: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    margin: 20px;
+    margin-bottom: 0px;
+    
+  }
+  .card {
+    padding: 40px;
+    img {
+      height: 64px;
+      right: 20px;
+      top: 20px;
+    }
   }
 }
