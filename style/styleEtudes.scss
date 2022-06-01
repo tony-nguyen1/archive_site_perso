@@ -1,0 +1,81 @@
+:root {
+  --container-row-gap: 45px;
+  --main-projet-font-size: 28px;
+}
+html, body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-flow: column;
+}
+
+.container {
+  background-color: var(--main-bg-color);
+  flex: 1 1 auto;
+}
+
+header * {
+  color: var(--not-active-link-color);
+  font-size: var(--nav-font-size);
+}
+header a:hover {
+  color: var(--hover-link-color);
+}
+header svg {
+  height: 1em;
+  width: auto;
+}
+.container {
+  display: grid;
+  grid-template-columns: var(--espace-blanc) calc(100% - (2*var(--espace-blanc)))  var(--espace-blanc);
+  grid-template-rows: min-content auto;
+  grid-template-areas: 
+    ". navbarZone ."
+    ". mainZone .";
+  row-gap: var(--container-row-gap);
+}
+header {
+  grid-area: navbarZone;
+}
+header nav#navbar-desktop {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: 8px;
+}
+header nav#navbar-desktop #logo {
+  justify-self: start;
+  align-self: center;
+}
+header nav#navbar-desktop div.lienTexte {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  column-gap: var(--nav-column-gap);
+}
+
+main {
+  grid-area: mainZone;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  // grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+  grid-column-gap: 120px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 30px;
+  padding: 84px;
+  height: fit-content;
+  position: relative;
+
+  img {
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    right: 100px;
+  }
+}

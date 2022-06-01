@@ -80,7 +80,7 @@ body {
   display: flex;
   flex-flow: row;
   align-items: center;
-  font-size: 36px;
+  font-size: 1.948051948vw;
 }
 .contactLien img {
   width: 9.75rem;

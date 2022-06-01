@@ -2,7 +2,7 @@ nav#navbar-mobile {
   visibility: hidden;
   position: absolute;
 }
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   nav#navbar-desktop {
     visibility: hidden;
     position: absolute;

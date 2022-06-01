@@ -17,3 +17,16 @@
 a {
   text-decoration: none;
 }
+
+header nav a.active-link {
+  position: relative;
+  color: black;
+}
+.active-link::before {
+  content: '';
+  position: absolute;
+  width: 0.76785714285em;
+  height: 0.17em;
+  /* height: 0.21428571428em; */
+  background-color: black;
+}
