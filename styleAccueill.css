@@ -4,7 +4,7 @@
   grid-template-rows: 30px;
 }
 span {
-  font-size: 23px;
+  font-size: clamp(14px,1.244588744vw,23px);
 }
 #nom {
   grid-column-start: 1;
@@ -13,13 +13,14 @@ span {
 #ville {
   grid-column-start: -2;
   grid-column-end: -1;
+  justify-self: end;
 }
 
 
 #overlayBot h1 {
   margin: 0;
   margin-bottom: 36px;
-  font-size: 92;
+  font-size: clamp(46px, 12.266vw, 92px);
   transform: translate(-10px);
 }
 #overlayBot div {
@@ -32,16 +33,15 @@ span {
   column-gap: 104px;
   row-gap: 10px;
 }
+#buttons .buttonSecondary, #buttons .buttonPrimary {
+  border-radius: 10px;
+  padding: 25px 19px;
+  border: 7px solid #064C9E;
+  /* font-size: 56px; */
+  font-size: clamp(30px, 8vw, 56px);
+}
 .buttonPrimary {
   background-color: #064C9E;
-  padding: 25px 19px;
-  border-radius: 10px;
-  border: 7px solid #064C9E;
-}
-.buttonSecondary {
-  padding: 25px 19px;
-  border-radius: 10px;
-  border: 7px solid #064C9E;
 }
 
 #overlay {

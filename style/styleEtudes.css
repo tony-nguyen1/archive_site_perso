@@ -70,6 +70,8 @@ main {
   grid-area: mainZone;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+  grid-template-rows: -webkit-min-content;
+  grid-template-rows: min-content;
   grid-column-gap: 120px;
   grid-row-gap: 30px;
 }

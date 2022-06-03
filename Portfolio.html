@@ -31,13 +31,26 @@
     </header>
     <div id="filtre">
         <h3>Filtre</h3>
-        <ul>
-          <li onclick="filter(this, 'html')">Html</li>
-          <li onclick="filter(this, 'css')">Css</li>
-          <li onclick="filter(this, 'js')">JavaScript</li>
-          <li onclick="filter(this, 'java')">Java</li>
-          <li onclick="filter(this, 'py')">Python</li>
-        </ul>
+        <div>
+          <button type="button" onclick="filter(this, 'html')" class="html">
+            <img src="./assets/logo/html.svg" alt="">
+          </button>
+          <button type="button"onclick="filter(this, 'css')" class="css">
+            <img src="./assets/logo/css.svg" alt="">
+          </button>
+          <button type="button"onclick="filter(this, 'sass')" class="sass">
+            <img src="./assets/logo/sass.svg" alt="">
+          </button>
+          <button type="button"onclick="filter(this, 'js')" class="js">
+            <img src="./assets/logo/javascript.png" alt="" class="logo-js">
+          </button>
+          <button type="button"onclick="filter(this, 'java')" class="java">
+            <img src="./assets/logo/JavaLogo.svg" alt="">
+          </button>
+          <button type="button"onclick="filter(this, 'py')" class="py">
+            <img src="./assets/logo/python.svg" alt="">
+          </button>
+        </div>
     </div>
     <div id="projets">
       <div class="projet py">
@@ -55,7 +68,7 @@
         </div>
         <div id="thumbnail-quiestce" class="image"></div>
       </div>
-      <div class="projet html css js">
+      <div class="projet html css sass js">
         <div class="contenu">
           <h2>Site web perso</h2>
           <p>
@@ -65,7 +78,7 @@
             <img src="./assets/logo/html.svg" alt="Logo de Html" class="logo">
             <img src="./assets/logo/css.svg" alt="Logo de Css" class="logo">
             <img src="./assets/logo/sass.svg" alt="Logo de Sass" class="logo">
-            <img id="logo-js" src="./assets/logo/javascript.png" alt="Logo de Sass" class="logo">
+            <img src="./assets/logo/javascript.png" alt="Logo de JavaScript" class="logo logo-js">
           </div>
           <a href="./ProjetSitePerso.html">
             En savoir plus

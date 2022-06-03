@@ -10,15 +10,31 @@
  */
 
 function filter(element,langage) {
-    if (mapLangage.has(langage)) { 
-        if (mapLangage.get(langage)) { element.classList.remove("selected"); }
-        else { element.classList.add("selected"); }
-        mapLangage.set(langage, !mapLangage.get(langage)); }
-    else { 
-        mapLangage.set(langage, true); 
-        element.classList.add("selected");
-    }
+    
+    //toggle
+    mapLangage.set(langage, !mapLangage.get(langage));
     console.log("mapLangage = ",mapLangage);
+    
+    
+    //affichage/masquage des button
+    let langageFiltre = getSetLangageAConserver();
+    let listButtons = document.getElementById("filtre").getElementsByTagName("button");
+    if (langageFiltre.size != 0) {
+        for (let i = 0; i < listButtons.length; i++) {
+            if (classListContientLangs(listButtons.item(i).classList, langageFiltre)) {
+                listButtons.item(i).classList.remove("grey");
+            } else {
+                listButtons.item(i).classList.add("grey");
+            }
+        }
+    }
+    else {
+        for (let i = 0; i < listButtons.length; i++) {
+            listButtons.item(i).classList.remove("grey");
+        }
+    }
+    
+    //affichage/masquage des div 
     maj();
 }
 
@@ -67,6 +83,12 @@ function maj() {
 }
 
 let mapLangage = new Map();
+mapLangage.set("html", false);
+mapLangage.set("css", false);
+mapLangage.set("sass", false);
+mapLangage.set("js", false);
+mapLangage.set("java", false);
+mapLangage.set("py", false);
 
 window.addEventListener('load', function () {
     // maj()
