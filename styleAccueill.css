@@ -68,7 +68,7 @@ body {
   display: grid;
   justify-items: center;
 
-  background-image: url("./tony.jpg");
+  background-image: url("./assets/tony.webp");
   background-color: black;
   
   height: 100%;
