@@ -17,30 +17,28 @@ body {
   display: grid;
   grid-template-columns: repeat(2, 50%);
   grid-template-areas: 
-    "colGauche colDroite";
+  "colGauche colDroite";
 }
 
+.colGauche, .colDroite {
+  padding: 8rem 7.375rem;
+}
 .colGauche {
   background-color: var(--main-blue-color);
   grid-area: colGauche;
-
-  .contentGauche {
-    margin-left: 11.25rem;
-    margin-top: 8rem;
-    margin-bottom: 8rem;
-    margin-right: 11.25rem;
-    color: #F0F0F0;
-  }
+  color: #F0F0F0;
 
   p {
     font-size: 45px;
     margin-bottom: 6.25rem;
+    text-align: justify;
   }
 
-  h1 {
-    font-size: 92px;
-    margin-bottom: 6.25rem;
-  }
+}
+h1 {
+  // font-size: 92px;
+  font-size: clamp(66px, 17.6vw, 92px);
+  margin-bottom: 1.0869em;
 }
 .colDroite {
   background-color: var(--main-bg-color);
@@ -68,9 +66,8 @@ body {
 .colDroite {
   grid-column: 2;
   background-color: #F0F0F0;
-  padding-right: 7.375rem;;
-  padding-left: 7.375rem;
-  padding-top: 8rem;
+}
+address {
   display: flex;
   flex-flow: column;
   row-gap: 7.375rem;
@@ -82,9 +79,65 @@ body {
   align-items: center;
   // font-size: 36px;
   font-size: 1.948051948vw;
-
   img {
     width: 9.75rem;
     margin-right: 62px;
+  }
+}
+
+@media (max-width: 1400px) {
+  :root {
+    --ecart: 7.375rem;
+  }
+  .container {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "en-haut"
+      "en-bas";
+  }
+
+  .colGauche {
+    grid-area: en-haut;
+    padding: 6rem var(--ecart);
+    
+  }
+  .colDroite {
+    grid-area: en-bas;
+  }
+  .contactLien {
+    font-size: 5.9vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --ecart: 20vw;
+  }
+  .container {
+    text-align: center;
+  }
+  .colGauche {
+    display: grid;
+    p { font-size: 30px; }
+  }
+  .bouttonNeobrutal {
+    justify-self: center;
+  }
+  .colDroite {
+    .contactLien {
+      flex-direction: column;
+    }
+  }
+  .contactLien {
+    img {
+      margin: 0px;
+    }
+  }
+  .bouttonNeobrutal {
+    font-size: 60px;
+    img {
+      height: 1em;
+    }
   }
 }
