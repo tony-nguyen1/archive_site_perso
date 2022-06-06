@@ -136,7 +136,7 @@ header nav svg#logo {
   grid-column-start: 7;
   grid-column-end: 11;
 
-  background-image: url("../assets/stockThumbnail.png");
+  background-image: url("../assets/stockThumbnail.webp");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -146,7 +146,7 @@ header nav svg#logo {
   border-radius: 0px 39px 39px 0px;
 }
 #projets #thumbnail-quiestce {
-  background-image: url("../assets/ProjetQuiEstCe/thumbnail.png");
+  background-image: url("../assets/ProjetQuiEstCe/thumbnail.webp");
 }
 #projets .projet h2 {
   position: absolute;

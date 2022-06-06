@@ -1,6 +1,7 @@
 @font-face {
-  font-family: "Inria Sans";
-  src:url("InriaSans-Regular.ttf") format("truetype");
+  font-family: 'Inria Sans';
+  src:url('InriaSans-Regular.ttf') format("truetype");
+  font-display: swap;
 }
 
 html { font-family: "Inria Sans"; }
