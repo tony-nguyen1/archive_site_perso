@@ -3,7 +3,11 @@ nav#navbar-mobile {
   position: absolute;
 }
 @media (max-width: 700px) {
+  :root {
+    --nav-column-gap: 0px;
+  }
   nav#navbar-desktop {
+    display: none;
     visibility: hidden;
     position: absolute;
   }
