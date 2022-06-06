@@ -23,13 +23,14 @@ header ol {
 }
 header * {
   text-decoration: none;
-  color: #8a8a8a;
+  /* color: #8a8a8a; */
+  color: #4a4a4a;
   font-size: clamp(20px, 2.96875vw, 56px);
   /* font-size: 2.96875vw; */
   /* font-size: minmax(20px, 2.96875vw); */
 }
 header a:hover {
-  color: #696969;
+  color: #2e2e2e;
   /* background-color: #064C9E; */
 }
 header a.active-link {
