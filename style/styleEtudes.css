@@ -1,3 +1,13 @@
+/*
+  Variables
+*/
+:root {
+  --padding-horizontal: 70px;
+}
+
+/*
+  Full screen
+*/
 html, body {
   margin: 0px;
   padding: 0px;
@@ -11,6 +21,14 @@ body {
 }
 
 .container {
+  background-color: var(--main-bg-color);
+  flex: 1 1 auto;
+}
+
+/*
+  Structure de base
+*/
+.container {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: -webkit-min-content auto;
@@ -19,54 +37,50 @@ body {
   row-gap: var(--container-row-gap);
 }
 
-.container {
-  background-color: var(--main-bg-color);
-  flex: 1 1 auto;
-}
-
-main, header {
-  padding: 0px var(--espace-blanc) 0px;
-}
-
 main {
   grid-area: mainZone;
 }
 
 header {
   grid-area: navbarZone;
+  padding-top: 8px;
 }
 
+header, main {
+  padding-left: var(--padding-horizontal);
+  padding-right: var(--padding-horizontal);
+}
+
+/* Nav bar */
 header * {
   color: var(--not-active-link-color);
   font-size: var(--nav-font-size);
 }
-
 header a:hover {
   color: var(--hover-link-color);
 }
-
 header svg {
   height: 1em;
   width: auto;
 }
-
-header nav#navbar-desktop {
+header #navbar-desktop {
   display: grid;
   grid-template-columns: auto auto;
-  margin-top: 8px;
 }
-
-header nav#navbar-desktop #logo {
+header #navbar-desktop #logo {
   justify-self: start;
   align-self: center;
 }
-
-header nav#navbar-desktop div.lienTexte {
+header #navbar-desktop .lienTexte {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   -moz-column-gap: var(--nav-column-gap);
        column-gap: var(--nav-column-gap);
+}
+header #navbar-mobile {
+  visibility: hidden;
+  position: absolute;
 }
 
 nav#navbar-mobile {
@@ -77,6 +91,10 @@ nav#navbar-mobile {
 @media (max-width: 700px) {
   :root {
     --nav-column-gap: 0px;
+  }
+
+  header {
+    padding: 0px;
   }
 
   nav#navbar-desktop {

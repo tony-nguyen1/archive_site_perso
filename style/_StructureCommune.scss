@@ -1,3 +1,13 @@
+/*
+  Variables
+*/
+:root {
+  --padding-horizontal: 70px;
+}
+
+/*
+  Full screen
+*/
 html, body {
   margin: 0px;
   padding: 0px;
@@ -9,8 +19,15 @@ body {
   flex-flow: column;
 }
 .container {
+  background-color: var(--main-bg-color);
+  flex: 1 1 auto;
+}
+
+/*
+  Structure de base
+*/
+.container {
   display: grid;
-  // grid-template-columns: var(--espace-blanc) calc(100% - (2*var(--espace-blanc)))  var(--espace-blanc);
   grid-template-columns: 100%;
   grid-template-rows: min-content auto;
   grid-template-areas: 
@@ -18,42 +35,45 @@ body {
     "mainZone";
   row-gap: var(--container-row-gap);
 }
-.container {
-  background-color: var(--main-bg-color);
-  flex: 1 1 auto;
-}
-main, header {
-  padding: 0px var(--espace-blanc) 0px;
-}
 main {
   grid-area: mainZone;
 }
 header {
   grid-area: navbarZone;
+  padding-top: 8px;
 }
-header * {
-  color: var(--not-active-link-color);
-  font-size: var(--nav-font-size);
+header, main {
+  padding-left: var(--padding-horizontal); padding-right: var(--padding-horizontal);
 }
-header a:hover {
-  color: var(--hover-link-color);
-}
-header svg {
-  height: 1em;
-  width: auto;
-}
-header nav#navbar-desktop {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin-top: 8px;
-}
-header nav#navbar-desktop #logo {
-  justify-self: start;
-  align-self: center;
-}
-header nav#navbar-desktop div.lienTexte {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  column-gap: var(--nav-column-gap);
+/* Nav bar */
+header {
+  * {
+    color: var(--not-active-link-color);
+    font-size: var(--nav-font-size);
+  }
+  a:hover {
+    color: var(--hover-link-color);
+  }
+  svg {
+    height: 1em;
+    width: auto;
+  }
+  #navbar-desktop {
+    display: grid;
+    grid-template-columns: auto auto;
+    #logo {
+      justify-self: start;
+      align-self: center;
+    }
+    .lienTexte {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      column-gap: var(--nav-column-gap);
+    }
+  }
+  #navbar-mobile {
+    visibility: hidden;
+    position: absolute;
+  }
 }

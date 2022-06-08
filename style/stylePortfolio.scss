@@ -1,73 +1,25 @@
-@use 'StructureCommuneTemp';
+@use 'StructureCommune';
+
+/*
+  Structure de base
+*/
 .container {
+  row-gap: 140px;
+}
+
+/*
+  Structure de la page
+*/
+main {
   display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  /* grid-gap: 20px; */
+  grid-template-columns: 1fr 11fr;
+  grid-template-areas: 
+    "filtre carte";
   column-gap: 20px;
   row-gap: 140px;
-
-  padding: 8px 70px;
 }
-header, main {
-  // padding: 0px 70px 0px;
-}
-main {
-  grid-column: col-start / span 12;
-  display: grid;
-  grid-template-columns: repeat(12, [col-start] 1fr);
-  width: 100%;
-  column-gap: 20px;
-row-gap: 140px;
-// padding-bottom: 8px;
-}
-/* .container > * {
-  grid-column: col-start / span 12;
-} */
-
-header {
-  grid-column: col-start / span 12;
-  // padding-top: 8px;
-}
-header ol {
-  margin: 0px;
-  padding: 0px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  column-gap: 60px;
-}
-header * {
-  text-decoration: none;
-  /* color: #8a8a8a; */
-  color: #4a4a4a;
-  font-size: clamp(20px, 2.96875vw, 56px);
-  /* font-size: 2.96875vw; */
-  /* font-size: minmax(20px, 2.96875vw); */
-}
-header a:hover {
-  color: #2e2e2e;
-  /* background-color: #064C9E; */
-}
-header a.active-link {
-  position: relative;
-  color: black;
-}
-.active-link::before {
-  content: '';
-  position: absolute;
-  width: 0.76785714285em;
-  height: 0.17em;
-  /* height: 0.21428571428em; */
-  background-color: black;
-}
-header nav svg#logo {
-  height: 1em;
-  align-self: center;
-  width: auto;
-}
-
 #filtre {
-  grid-column: col-start / span 1;
+  grid-area: filtre;
   background-color: #000;
   height: fit-content;
   text-align: center;
@@ -77,67 +29,59 @@ header nav svg#logo {
   position: sticky;
   top: 20px;
   border-radius: 23px;
-}
-#filtre h3 {
-  color: white;
-  font-size: 28px;
-  margin-bottom: 16px;
-}
-#filtre ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  row-gap: 0.7em;
-}
-#filtre ul li {
-  background-color: white;
-  border-radius: 10px;
-  padding: 0px 0.7em;
-  cursor: pointer;
-}
-#filtre button {
-  height: 64px;
-  width: 64px;
-  border: none;
-  padding: 0px;
-  background-color: rgba(0, 0, 0, .0);
-  cursor: pointer;
-}
 
-#filtre img {
-  width: 100%;
-  height: 100%;
-}
+  h3 {
+    color: white;
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
 
-#filtre div {
-  display: flex;
-  flex-direction: column;
-  row-gap: 12px;
-  align-items: center;
+  button {
+    height: 64px;
+    width: 64px;
+    border: none;
+    padding: 0px;
+    background-color: rgba(0, 0, 0, .0);
+    cursor: pointer;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+    align-items: center;
+  }
+
+  button {
+    transition-property: all;
+    transition-duration: 0.4s;
+    filter: grayscale(0%);
+  }
+
+  .grey {
+    filter: grayscale(80%);
+  }
 }
 
 #projets {
-  grid-column: 2 / span 11;
+  grid-area: carte;
   display: flex;
   flex-direction: column;
   row-gap: 146px;
   margin-bottom: 50px;
 }
-
 .projet {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   border-radius: 39px;
-  /* position: relative;
-  padding-top: 64px;
-  padding-left: 74px;
-  padding-bottom: 53px; */
 }
-#projets .projet .contenu {
+.contenu {
   grid-column-start: 1;
   grid-column-end: 7;
   position: relative;
@@ -164,22 +108,18 @@ header nav svg#logo {
 #projets #thumbnail-quiestce {
   background-image: url("../assets/ProjetQuiEstCe/thumbnail.webp");
 }
-#projets .projet h2 {
+.projet h2 {
   position: absolute;
   top: -0.75em;
   font-size: 96px;
   margin-top: 0px;
   white-space: nowrap;
 }
-#projets .projet * {
-  margin: 0px;
-  padding: 0px;
-}
 
-#projets .projet p {
+.projet p {
   font-size: 34px;
 }
-#projets .projet .contenu a {
+.contenu a {
   background-color: black;
   color: white;
   text-decoration: none;
@@ -192,29 +132,16 @@ header nav svg#logo {
   align-items: center;
   font-size: 28px;
 }
-
-#projets .projet .logo {
+.logo {
   height: 64px;
   width: 64px;
 }
-
-.logo-js {
-  border-radius: 8px;
-}
+.logo-js { border-radius: 8px; }
 .langage {
   display: flex;
   flex-direction: row;
   column-gap: 12px;
 }
-#filtre button {
-  transition-property: all;
-  transition-duration: 0.4s;
-  filter: grayscale(0%);
-}
-#filtre .grey {
-  filter: grayscale(80%);
-}
-
 #projets .projet.removed { position: absolute; visibility: hidden; display: none; }
 
 .html {
@@ -225,11 +152,6 @@ header nav svg#logo {
 }
 
 
-
-body {
-  background-color: #F0F0F0;
-  margin: 0px;
-}
 
 @media (max-width: 1400px) {
   main {

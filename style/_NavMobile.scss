@@ -6,6 +6,9 @@ nav#navbar-mobile {
   :root {
     --nav-column-gap: 0px;
   }
+  header {
+    padding: 0px;
+  }
   nav#navbar-desktop {
     display: none;
     visibility: hidden;
