@@ -17,22 +17,28 @@ nav#navbar-mobile {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center center;
+
   }
-  header {
+  .container header {
     grid-area: navbarMobileZone;
+    z-index: 1;
+    background-color: rgba(111,162,221,1);
+    display: grid;
   }
   header img {
-    height: 64px;
+    width: 64px;
   }
-  .container {
+  body div.container {
     display: grid;
-    grid-template-rows: auto 80px;
+    grid-template-rows: calc(100vh - 80px) 80px;
     grid-template-columns: 100%;
     grid-template-areas: 
       "mainZone"
       "navbarMobileZone";
-      row-gap: 0px;
+    row-gap: 0px;
   }
-
-
+  main {
+    overflow-y: scroll;
+    padding: 20px;
+  }
 }
