@@ -7,14 +7,17 @@
   <meta name="author" content="Tony Nguyen">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Portfolio - Tony Nguyen</title>
+  
+  <!-- preload -->
+  <link rel="preload" href="./assets/icon/codage-html.png" as="image" type="image/png">
 
-  <title>Work In Progess</title>
-
-  <link rel="icon" href="./assets/icon/1055073_coding_programming_tags_icon.svg">
+  <!-- styles -->
+  <link rel="icon"  type="image/png" href="./assets/icon/codage-html.png">
   <link rel="stylesheet" href="./styleFont.css">
   <link rel="stylesheet" href="./style/styleCustom.css">
   <link rel="stylesheet" href="./style/stylePortfolio.css">
-  <script src="./scripts/filter.js"></script>
 </head>
 <body>
   <div class="container">
@@ -49,88 +52,78 @@
       </nav>
     </header>
     <main>
-      <!-- <div id="content"> -->
-        <aside id="filtre">
-            <h3>Filtre</h3>
-            <div>
-              <button type="button" onclick="filter(this, 'html')" class="html">
-                <img src="./assets/logo/html.svg" alt="Un bouclier orange avec un 5" title="HyperText Markup Language 5 logo">
-              </button>
-              <button type="button"onclick="filter(this, 'css')" class="css">
-                <img src="./assets/logo/css.svg" alt="Un bouclier bleu avec un 3" title="Cascading Style Sheets logo">
-              </button>
-              <button type="button"onclick="filter(this, 'sass')" class="sass">
-                <img src="./assets/logo/sass.svg" alt="La lettre S écrit en cursif en blanc dans un cercle rose" title="Syntactically Awesome Style Sheets logo">
-              </button>
-              <button type="button"onclick="filter(this, 'js')" class="js">
-                <img src="./assets/logo/javascript.png" alt="Un carré Jaune avec l'inscription 'JS' en-bas à droite" title="Javascript logo" class="logo-js">
-              </button>
-              <button type="button"onclick="filter(this, 'java')" class="java">
-                <img src="./assets/logo/JavaLogo.svg" alt="Une tasse de café bleu très chaude sur fond blanc" title="Java logo">
-              </button>
-              <button type="button"onclick="filter(this, 'py')" class="py">
-                <img src="./assets/logo/python.svg" alt="Un python bleu et un python jaune" title="Python logo">
-              </button>
-            </div>
-          </aside>
-        <article id="projets">
-          <article class="projet py">
-            <section class="contenu">
-              <h2>Qui-est-ce ?</h2>
-              <p>
-                Le jeu de plateau, recrée en python avec une interface homme-machine (tkinter). 
-              </p>
-              <img src="./assets/logo/python.svg" alt="Logo de Python" class="logo">
-  
-              <a href="./ProjetQuiEstCe.html">
-                En savoir plus
-                <svg id="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>
-              </a>
-            </section>
-            <div id="thumbnail-quiestce" class="image"></div>
-          </article>
-          <article class="projet html css sass js">
-            <section class="contenu">
-              <h2>Site web perso</h2>
-              <p>
-                Mon Curriculum Vitae en ligne et fait à la main.
-              </p>
-              <div class="langage">
-                <img src="./assets/logo/html.svg" alt="Logo de Html" class="logo">
-                <img src="./assets/logo/css.svg" alt="Logo de Css" class="logo">
-                <img src="./assets/logo/sass.svg" alt="Logo de Sass" class="logo">
-                <img src="./assets/logo/javascript.png" alt="Logo de JavaScript" class="logo logo-js">
-              </div>
-              <a href="./ProjetSitePerso.html">
-                En savoir plus
-                <svg id="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>
-              </a>
-            </section>
-            <div class="image"></div>
-          </article>
-          <article class="projet">
-            <section class="contenu">
-              <h2>Placeholder</h2>
-              <p>
-                Description description description description description 
-                description description description description description 
-                description description description description description 
-                description description description description description 
-                description description description.
-              </p>
-            </section>
-            <div class="image"></div>
-          </article>
-          <!-- <div class="projet">
-            <h2>Titre</h2>
-            <p>Description</p>
+      <aside id="filtre">
+        <h3>Filtre</h3>
+        <div>
+          <button type="button" onclick="filter(this, 'html')" class="html">
+            <img src="./assets/logo/html.svg" alt="Un bouclier orange avec un 5" title="HyperText Markup Language 5 logo">
+          </button>
+          <button type="button" onclick="filter(this, 'css')" class="css">
+            <img src="./assets/logo/css.svg" alt="Un bouclier bleu avec un 3" title="Cascading Style Sheets logo">
+          </button>
+          <button type="button" onclick="filter(this, 'sass')" class="sass">
+            <img src="./assets/logo/sass.svg" alt="La lettre S écrit en cursif en blanc dans un cercle rose" title="Syntactically Awesome Style Sheets logo">
+          </button>
+          <button type="button" onclick="filter(this, 'js')" class="js">
+            <img src="./assets/logo/javascript.png" alt="Un carré Jaune avec l'inscription 'JS' en-bas à droite" title="Javascript logo" class="logo-js">
+          </button>
+          <button type="button" onclick="filter(this, 'java')" class="java">
+            <img src="./assets/logo/JavaLogo.svg" alt="Une tasse de café bleu très chaude sur fond blanc" title="Java logo">
+          </button>
+          <button type="button" onclick="filter(this, 'py')" class="py">
+            <img src="./assets/logo/python.svg" alt="Un python bleu et un python jaune" title="Python logo">
+          </button>
+        </div>
+    </aside>
+    <article id="projets">
+      <article class="projet py">
+        <section class="contenu">
+          <h2>Qui-est-ce ?</h2>
+          <p>
+            Le jeu de plateau, recrée en python avec une interface homme-machine (tkinter). 
+          </p>
+          <img src="./assets/logo/python.svg" alt="Logo de Python" class="logo">
+
+          <a href="./ProjetQuiEstCe.html">
+            En savoir plus
+            <svg class="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>
+          </a>
+        </section>
+        <div id="thumbnail-quiestce" class="image"></div>
+      </article>
+      <article class="projet html css sass js">
+        <section class="contenu">
+          <h2>Site web perso</h2>
+          <p>
+            Mon Curriculum Vitae en ligne et fait à la main.
+          </p>
+          <div class="langage">
+            <img src="./assets/logo/html.svg" alt="Logo de Html" class="logo">
+            <img src="./assets/logo/css.svg" alt="Logo de Css" class="logo">
+            <img src="./assets/logo/sass.svg" alt="Logo de Sass" class="logo">
+            <img src="./assets/logo/javascript.png" alt="Logo de JavaScript" class="logo logo-js">
           </div>
-          <div class="projet">
-            <h2>Titre</h2>
-            <p>Description</p>
-          </div> -->
-        </article>
-      <!-- </div> -->
+          <a href="./ProjetSitePerso.html">
+            En savoir plus
+            <svg class="chevron" fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M5.63605 7.75735L7.05026 6.34314L12.7071 12L7.05029 17.6568L5.63608 16.2426L9.87869 12L5.63605 7.75735Z" fill="currentColor"/><path d="M12.7071 6.34314L11.2929 7.75735L15.5356 12L11.2929 16.2426L12.7072 17.6568L18.364 12L12.7071 6.34314Z" fill="currentColor"/></svg>
+          </a>
+        </section>
+        <div class="image"></div>
+      </article>
+      <article class="projet">
+        <section class="contenu">
+          <h2>Placeholder</h2>
+          <p>
+            Description description description description description 
+            description description description description description 
+            description description description description description 
+            description description description description description 
+            description description description.
+          </p>
+        </section>
+        <div class="image"></div>
+      </article>
+    </article>
     </main>
   </div>
 </body>

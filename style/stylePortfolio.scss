@@ -1,5 +1,10 @@
 @use 'StructureCommune';
+@use 'NavMobile';
 
+
+:root {
+  --button-size: 64px;
+}
 /*
   Structure de base
 */
@@ -23,9 +28,7 @@ main {
   background-color: #000;
   height: fit-content;
   text-align: center;
-  padding-bottom: 28px;
-  padding-left: 22px;
-  padding-right: 22px;
+  padding: 12px 22px 28px;
   position: sticky;
   top: 20px;
   border-radius: 23px;
@@ -37,8 +40,8 @@ main {
   }
 
   button {
-    height: 64px;
-    width: 64px;
+    height: var(--button-size);
+    width: var(--button-size);
     border: none;
     padding: 0px;
     background-color: rgba(0, 0, 0, .0);
@@ -78,12 +81,12 @@ main {
 .projet {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(10, 1fr);
+  grid-template-columns: 6fr 4fr;
+  grid-template-areas: "contenu thumbnail";
   border-radius: 39px;
 }
 .contenu {
-  grid-column-start: 1;
-  grid-column-end: 7;
+  grid-area: contenu;
   position: relative;
   padding-top: 64px;
   padding-left: 74px;
@@ -93,8 +96,7 @@ main {
   row-gap: 40px;
 }
 .image {
-  grid-column-start: 7;
-  grid-column-end: 11;
+  grid-area: thumbnail;
 
   background-image: url("../assets/stockThumbnail.webp");
   background-position: center;
@@ -156,26 +158,33 @@ main {
 @media (max-width: 1400px) {
   main {
     display: grid;
-    grid-template-rows: 110px auto;
+    grid-template-rows: auto;
+    grid-template-columns: 100px 1fr;
+    grid-template-areas: "filtre carte";
   }
   #filtre {
     grid-row: 1;
-    grid-column: col-start;
+    grid-column: filtre;
     z-index: 1;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    h3 {
+      &::after {
+        // content: " :";
+      }
+    }
   }
   #filtre div {
-    flex-direction: row;
+    // flex-direction: row;
     justify-content: center;
     column-gap: 12px;
   }
   #projets {
-    grid-column: col-start / span 12;
+    grid-area: carte;
   }
-  #projets .projet .contenu {
-    grid-column-end: 6;
-  }
-  .image {
-    grid-column-start: 6;
+  .projet {
+    grid-template-columns: 1fr 1fr;
   }
   /* .projet {
     display: grid;
@@ -188,4 +197,83 @@ main {
     grid-column: 1 / span 6;
     border-radius: 0px  0px 39px 39px;
   } */
+}
+
+@media (max-width: 1000px) {
+  .projet {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "thumbnail"
+      "contenu"
+    ;
+
+    h2 {
+      font-size: 83px;
+    }
+  }
+  .image {
+    border-radius: 39px 39px 0px 0px ;
+  }
+  .py {
+    border-left: 0px solid #3777ad;
+    border-bottom: 7px solid #3777ad;
+  }
+  .html {
+    border-left: 0px solid #ef652a;
+    border-bottom: 7px solid #ef652a;
+  }
+  .contenu {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --padding-horizontal: 35px;
+    --button-size: 38px;
+  }
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  #projets {
+    row-gap: 90px;
+    padding-bottom: 30px;
+  }
+  .projet {
+    h2 {
+      font-size: 39px;
+    }
+    p {
+      font-size: 22px;
+      text-align: justify;
+    }
+  }
+  .contenu {
+    row-gap: 18px;
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+  main {
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 100%;
+    grid-template-areas: "filtre" "carte";
+    overflow-x: hidden;
+    row-gap: 35px;
+  }
+  #filtre {
+    top: 0px;
+    padding-top: 2px;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    // overflow-x: scroll;
+    div {
+      flex-direction: row;
+      // overflow-y: scroll;
+      // width: fit-content;
+      flex-wrap: wrap;
+    }
+  }
 }
