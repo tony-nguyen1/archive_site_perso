@@ -3,7 +3,8 @@
   --main-projet-font-size: 28px;
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -91,6 +92,13 @@ main hgroup h2 {
 main h2:not(main hgroup h2) {
   margin-bottom: 10px;
 }
+main h2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
 main #desc {
   grid-area: description;
 }
@@ -102,6 +110,10 @@ main #galerie {
 }
 main #special {
   grid-area: special;
+}
+
+h2 img {
+  height: 0.9em;
 }
 
 #filAriane {
@@ -124,14 +136,18 @@ main #special {
   /* https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
 }
 
-main #galerie div.images div, img {
+main #galerie div.images div {
+  padding: 0px 100px 0px;
+}
+main #galerie div.images div,
+main #galerie div.images img {
   height: 90%;
   width: auto;
 }
 
 main #galerie div.images div {
   text-align: center;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   line-height: 128px;
   font-size: 64px;
   width: -webkit-fit-content;

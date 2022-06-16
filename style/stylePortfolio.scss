@@ -5,6 +5,7 @@
 :root {
   --button-size: 64px;
 }
+
 /*
   Structure de base
 */
@@ -18,11 +19,12 @@
 main {
   display: grid;
   grid-template-columns: 1fr 11fr;
-  grid-template-areas: 
+  grid-template-areas:
     "filtre carte";
   column-gap: 20px;
   row-gap: 140px;
 }
+
 #filtre {
   grid-area: filtre;
   background-color: #000;
@@ -78,6 +80,7 @@ main {
   row-gap: 146px;
   margin-bottom: 50px;
 }
+
 .projet {
   background-color: white;
   display: grid;
@@ -85,6 +88,7 @@ main {
   grid-template-areas: "contenu thumbnail";
   border-radius: 39px;
 }
+
 .contenu {
   grid-area: contenu;
   position: relative;
@@ -95,6 +99,7 @@ main {
   flex-direction: column;
   row-gap: 40px;
 }
+
 .image {
   grid-area: thumbnail;
 
@@ -107,9 +112,11 @@ main {
 
   border-radius: 0px 39px 39px 0px;
 }
+
 #projets #thumbnail-quiestce {
   background-image: url("../assets/ProjetQuiEstCe/thumbnail.webp");
 }
+
 .projet h2 {
   position: absolute;
   top: -0.75em;
@@ -121,6 +128,7 @@ main {
 .projet p {
   font-size: 34px;
 }
+
 .contenu a {
   background-color: black;
   color: white;
@@ -134,23 +142,38 @@ main {
   align-items: center;
   font-size: 28px;
 }
+
 .logo {
   height: 64px;
   width: 64px;
 }
-.logo-js { border-radius: 8px; }
+
+.logo-js {
+  border-radius: 8px;
+}
+
 .langage {
   display: flex;
   flex-direction: row;
   column-gap: 12px;
 }
-#projets .projet.removed { position: absolute; visibility: hidden; display: none; }
+
+#projets .projet.removed {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
 
 .html {
   border-left: 7px solid #ef652a;
 }
+
 .py {
   border-left: 7px solid #3777ad;
+}
+
+.java {
+  border-left: 7px solid #EA2D2E;
 }
 
 
@@ -162,6 +185,7 @@ main {
     grid-template-columns: 100px 1fr;
     grid-template-areas: "filtre carte";
   }
+
   #filtre {
     grid-row: 1;
     grid-column: filtre;
@@ -175,17 +199,21 @@ main {
       }
     }
   }
+
   #filtre div {
     // flex-direction: row;
     justify-content: center;
     column-gap: 12px;
   }
+
   #projets {
     grid-area: carte;
   }
+
   .projet {
     grid-template-columns: 1fr 1fr;
   }
+
   /* .projet {
     display: grid;
     grid-template-columns: 1fr;
@@ -204,7 +232,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
-    "thumbnail"
+      "thumbnail"
       "contenu"
     ;
 
@@ -212,17 +240,22 @@ main {
       font-size: 83px;
     }
   }
+
   .image {
-    border-radius: 39px 39px 0px 0px ;
+    border-radius: 39px 39px 0px 0px;
   }
+
   .py {
     border-left: 0px solid #3777ad;
     border-bottom: 7px solid #3777ad;
   }
+
   .html {
     border-left: 0px solid #ef652a;
     border-bottom: 7px solid #ef652a;
   }
+
+
   .contenu {
     padding-left: 40px;
     padding-right: 40px;
@@ -234,40 +267,48 @@ main {
     --padding-horizontal: 35px;
     --button-size: 38px;
   }
+
   .logo {
     height: 40px;
     width: 40px;
   }
+
   #projets {
     row-gap: 90px;
     padding-bottom: 30px;
   }
+
   .projet {
     h2 {
       font-size: 39px;
     }
+
     p {
       font-size: 22px;
       text-align: justify;
     }
   }
+
   .contenu {
     row-gap: 18px;
     padding-top: 45px;
     padding-bottom: 30px;
   }
+
   main {
     grid-template-rows: auto 1fr;
     grid-template-columns: 100%;
-    grid-template-areas: "filtre" "carte";
+    grid-template-areas: "filtre""carte";
     overflow-x: hidden;
     row-gap: 35px;
   }
+
   #filtre {
     top: 0px;
     padding-top: 2px;
     padding-bottom: 10px;
     margin-bottom: 10px;
+
     // overflow-x: scroll;
     div {
       flex-direction: row;

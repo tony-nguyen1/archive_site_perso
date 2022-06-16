@@ -2,11 +2,14 @@
   --container-row-gap: 45px;
   --main-projet-font-size: 28px;
 }
-html, body {
+
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
+
 body {
   display: flex;
   flex-flow: column;
@@ -21,34 +24,41 @@ header nav#navbar-desktop * {
   color: var(--not-active-link-color);
   font-size: var(--nav-font-size);
 }
+
 header nav#navbar-desktop a:hover {
   color: var(--hover-link-color);
 }
+
 header svg {
   height: 1em;
   width: auto;
 }
+
 .container {
   display: grid;
-  grid-template-columns: var(--espace-blanc) calc(100% - (2*var(--espace-blanc)))  var(--espace-blanc);
+  grid-template-columns: var(--espace-blanc) calc(100% - (2*var(--espace-blanc))) var(--espace-blanc);
   grid-template-rows: auto auto;
-  grid-template-areas: 
+  grid-template-areas:
     ". navbarZone ."
     ". mainZone .";
   row-gap: var(--container-row-gap);
 }
+
 header {
   grid-area: navbarZone;
 }
+
 header nav#navbar-desktop {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: 8px;
 }
+
 header nav#navbar-desktop #logo {
   justify-self: start;
   align-self: center;
 }
+
 header nav#navbar-desktop div.lienTexte {
   display: flex;
   flex-direction: row;
@@ -61,7 +71,7 @@ main {
   display: grid;
   grid-template-columns: 40% 60%;
   grid-template-rows: auto auto auto auto auto;
-  grid-template-areas: 
+  grid-template-areas:
     "fil fil"
     "titre langage"
     "description description"
@@ -79,24 +89,53 @@ main {
   #filAriane {
     grid-area: fil;
   }
+
   hgroup {
     grid-area: titre;
     margin-top: 30px;
     font-size: 2.8125rem;
+
     h2 {
       font-size: 1.875rem;
     }
   }
-  h2:not(main hgroup h2) {  margin-bottom: 10px; }
-  #desc { grid-area: description; }
-  #video { grid-area: video; }
-  #galerie { grid-area: galerie; }
-  #special { grid-area: special; }
+
+  h2:not(main hgroup h2) {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 6px;
+  }
+
+  #desc {
+    grid-area: description;
+  }
+
+  #video {
+    grid-area: video;
+  }
+
+  #galerie {
+    grid-area: galerie;
+  }
+
+  #special {
+    grid-area: special;
+  }
+}
+
+h2 img {
+  height: 0.9em;
 }
 
 #filAriane {
   font-size: 1rem;
 }
+
 // #video iframe {
 //   width: 100%;
 // }
@@ -119,13 +158,21 @@ main {
   /* https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
 }
 
-main #galerie div.images div, img {
-  height: 90%;
-  width: auto;
+main #galerie div.images {
+  div {
+    padding: 0px 100px 0px;
+  }
+
+  div,
+  img {
+    height: 90%;
+    width: auto;
+  }
 }
+
 main #galerie div.images div {
   text-align: center;
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   line-height: 128px;
   font-size: 64px;
   width: fit-content;

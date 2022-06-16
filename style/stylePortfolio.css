@@ -303,6 +303,10 @@ main {
   border-left: 7px solid #3777ad;
 }
 
+.java {
+  border-left: 7px solid #EA2D2E;
+}
+
 @media (max-width: 1400px) {
   main {
     display: grid;

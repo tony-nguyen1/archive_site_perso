@@ -1,0 +1,43 @@
+@use 'StructureCommune';
+@use 'NavMobile';
+
+:root {
+  --container-row-gap: 45px;
+  --main-projet-font-size: 28px;
+}
+
+main {
+  padding: 0px;
+  height: fit-content;
+}
+
+.card {
+  height: calc(100vh - 75px);
+  padding: 50px var(--padding-horizontal) 0;
+  overflow: hidden;
+
+  section {
+    margin-top: 70px;
+  }
+}
+
+main .card:nth-child(1) {
+  background-color: #DAF7A6;
+}
+
+main .card:nth-child(2) {
+  background-color: #FF5733;
+}
+
+hgroup {
+  font-size: 2.5rem;
+  margin-top: 0.6em;
+}
+
+span.date {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1em;
+}
