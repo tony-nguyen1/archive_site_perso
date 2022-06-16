@@ -136,26 +136,24 @@ h2 img {
   font-size: 1rem;
 }
 
-// #video iframe {
-//   width: 100%;
-// }
-
-#galerie .images {
-  /* width: 100%;
-  height: 35vh; */
-
-  background-color: #e4e3e3;
-  display: flex;
-  overflow: auto;
-  outline: 1px dashed lightgray;
-  flex: none;
-
-  width: 100%;
-  height: 315px;
-  flex-flow: row nowrap;
-
-  scroll-snap-type: x mandatory;
+#gallery {
   /* https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type */
+  overflow: auto;
+  display: flex;
+  scroll-snap-type: x mandatory;
+  height: 315px;
+  scroll-padding: 100px;
+  background-color: darkorchid;
+
+  .item {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    padding-right: 80px;
+  }
+
+  .item:last-child {
+    padding-right: 1000px;
+  }
 }
 
 main #galerie div.images {
@@ -182,10 +180,10 @@ main #galerie div.images div {
   align-items: center;
 }
 
-main #galerie div.images div:nth-child(even) {
-  background-color: aqua;
+main #galerie #gallery .item:nth-child(even) {
+  background-color: rgba(0, 255, 255, 0.4);
 }
 
-main #galerie div.images div:nth-child(odd) {
-  background-color: blueviolet;
+main #galerie div.images .item:nth-child(odd) {
+  background-color: rgba(137, 43, 226, 0.4);
 }
