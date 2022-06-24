@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "*.ttf": true,
+        "style/*.css": true,
+        "style/*.map": true
+    }
+}
