@@ -307,6 +307,10 @@ main {
   border-left: 7px solid #EA2D2E;
 }
 
+a.disabled {
+  cursor: not-allowed;
+}
+
 @media (max-width: 1400px) {
   main {
     display: grid;
