@@ -129,43 +129,43 @@ nav#navbar-mobile {
   }
 }
 :root {
-  --container-row-gap: 45px;
-  --main-projet-font-size: 28px;
+  --container-row-gap: 15px;
 }
 
-main {
-  padding: 0px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+article {
+  background-color: white;
+  padding: var(--padding-horizontal);
+}
+article h1 {
+  font-size: 7rem;
+  margin-left: -10px;
+}
+article h2 {
+  font-size: 3rem;
 }
 
-.card {
-  height: calc(100vh - 75px);
-  padding: 50px var(--padding-horizontal) 0;
-  overflow: hidden;
-}
-.card section {
-  margin-top: 70px;
+.bk {
+  background-color: #FF8732;
 }
 
-main .card:nth-child(1) {
-  background-color: #DAF7A6;
+.mcdo {
+  background-color: green;
 }
 
-main .card:nth-child(2) {
-  background-color: #FF5733;
+section {
+  margin-top: 50px;
+  padding-left: 22px;
+  font-size: 1.2rem;
 }
 
-hgroup {
-  font-size: 2.5rem;
-  margin-top: 0.6em;
+img {
+  height: 250px;
 }
 
 span.date {
   font-style: italic;
 }
 
-h2 {
-  font-size: 1em;
-}/*# sourceMappingURL=styleEtudesBis.css.map */
+main {
+  padding: 0px;
+}/*# sourceMappingURL=styleExperience.css.map */

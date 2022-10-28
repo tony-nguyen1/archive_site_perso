@@ -100,8 +100,18 @@ main {
     }
   }
 
-  h2:not(main hgroup h2) {
-    margin-bottom: 10px;
+  // h2:not(main hgroup h2) {
+  //   margin-bottom: 10px;
+  // }
+
+  #special {
+    h2 {
+      margin-bottom: 20px;
+    }
+
+    section {
+      margin-bottom: 10px;
+    }
   }
 
   h2 {

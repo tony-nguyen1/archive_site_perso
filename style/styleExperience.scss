@@ -1,0 +1,46 @@
+@use 'StructureCommune';
+@use 'NavMobile';
+
+:root {
+  --container-row-gap: 15px;
+}
+
+article {
+  background-color: white;
+  padding: var(--padding-horizontal);
+
+  h1 {
+    font-size: 7rem;
+    margin-left: -10px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+}
+
+.bk {
+  background-color: #FF8732;
+}
+
+.mcdo {
+  background-color: green;
+}
+
+section {
+  margin-top: 50px;
+  padding-left: 22px;
+  font-size: 1.2rem;
+}
+
+img {
+  height: 250px;
+}
+
+span.date {
+  font-style: italic;
+}
+
+main {
+  padding: 0px;
+}

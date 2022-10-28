@@ -91,22 +91,18 @@ address {
   :root {
     --ecart: 7.375rem;
   }
-
   .container {
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
     grid-template-areas: "en-haut" "en-bas";
   }
-
   .colGauche {
     grid-area: en-haut;
     padding: 6rem var(--ecart);
   }
-
   .colDroite {
     grid-area: en-bas;
   }
-
   .contactLien {
     font-size: 5.9vw;
   }
@@ -115,30 +111,24 @@ address {
   :root {
     --ecart: 20vw;
   }
-
   .container {
     text-align: center;
   }
-
   .colGauche {
     display: grid;
   }
   .colGauche p {
     font-size: 30px;
   }
-
   .bouttonNeobrutal {
     justify-self: center;
   }
-
   .colDroite .contactLien {
     flex-direction: column;
   }
-
   .contactLien img {
     margin: 0px;
   }
-
   .bouttonNeobrutal {
     font-size: 60px;
   }

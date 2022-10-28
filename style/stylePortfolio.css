@@ -92,17 +92,14 @@ nav#navbar-mobile {
   :root {
     --nav-column-gap: 0px;
   }
-
   header {
     padding: 0px;
   }
-
   nav#navbar-desktop {
     display: none;
     visibility: hidden;
     position: absolute;
   }
-
   nav#navbar-mobile {
     visibility: visible;
     position: relative;
@@ -110,18 +107,15 @@ nav#navbar-mobile {
     grid-template-columns: repeat(4, 1fr);
     place-items: center center;
   }
-
   .container header {
     grid-area: navbarMobileZone;
     z-index: 1;
     background-color: rgb(111, 162, 221);
     display: grid;
   }
-
   header img {
     width: 64px;
   }
-
   body div.container {
     display: grid;
     grid-template-rows: calc(100vh - 80px) 80px;
@@ -129,7 +123,6 @@ nav#navbar-mobile {
     grid-template-areas: "mainZone" "navbarMobileZone";
     row-gap: 0px;
   }
-
   main {
     overflow-y: scroll;
     padding: 20px;
@@ -318,7 +311,6 @@ a.disabled {
     grid-template-columns: 100px 1fr;
     grid-template-areas: "filtre carte";
   }
-
   #filtre {
     grid-row: 1;
     grid-column: filtre;
@@ -331,15 +323,12 @@ a.disabled {
     -moz-column-gap: 12px;
          column-gap: 12px;
   }
-
   #projets {
     grid-area: carte;
   }
-
   .projet {
     grid-template-columns: 1fr 1fr;
   }
-
   /* .projet {
     display: grid;
     grid-template-columns: 1fr;
@@ -361,21 +350,17 @@ a.disabled {
   .projet h2 {
     font-size: 83px;
   }
-
   .image {
     border-radius: 39px 39px 0px 0px;
   }
-
   .py {
     border-left: 0px solid #3777ad;
     border-bottom: 7px solid #3777ad;
   }
-
   .html {
     border-left: 0px solid #ef652a;
     border-bottom: 7px solid #ef652a;
   }
-
   .contenu {
     padding-left: 40px;
     padding-right: 40px;
@@ -386,17 +371,14 @@ a.disabled {
     --padding-horizontal: 35px;
     --button-size: 38px;
   }
-
   .logo {
     height: 40px;
     width: 40px;
   }
-
   #projets {
     row-gap: 90px;
     padding-bottom: 30px;
   }
-
   .projet h2 {
     font-size: 39px;
   }
@@ -404,13 +386,11 @@ a.disabled {
     font-size: 22px;
     text-align: justify;
   }
-
   .contenu {
     row-gap: 18px;
     padding-top: 45px;
     padding-bottom: 30px;
   }
-
   main {
     grid-template-rows: auto 1fr;
     grid-template-columns: 100%;
@@ -418,7 +398,6 @@ a.disabled {
     overflow-x: hidden;
     row-gap: 35px;
   }
-
   #filtre {
     top: 0px;
     padding-top: 2px;

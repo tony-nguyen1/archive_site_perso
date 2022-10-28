@@ -1,5 +1,6 @@
 @use 'StructureCommune';
 @use 'NavMobile';
+
 :root {
   --container-row-gap: 45px;
   --main-projet-font-size: 28px;
@@ -27,6 +28,7 @@ main {
   h1 {
     font-size: 2.5rem;
   }
+
   h2 {
     font-size: 1.4rem;
   }
@@ -44,10 +46,12 @@ main {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
-    
+
   }
+
   .card {
     padding: 40px;
+
     img {
       height: 64px;
       right: 20px;

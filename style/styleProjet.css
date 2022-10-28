@@ -89,7 +89,10 @@ main hgroup {
 main hgroup h2 {
   font-size: 1.875rem;
 }
-main h2:not(main hgroup h2) {
+main #special h2 {
+  margin-bottom: 20px;
+}
+main #special section {
   margin-bottom: 10px;
 }
 main h2 {
